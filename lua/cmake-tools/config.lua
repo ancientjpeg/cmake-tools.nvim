@@ -44,6 +44,7 @@ function Config:new(const)
 
   obj.executor = const.cmake_executor
   obj.runner = const.cmake_runner
+  obj.use_scratch = const.use_scratch
 
   return obj
 end
