@@ -53,7 +53,9 @@ function cmake.setup(values)
   cmake.register_dap_function()
   cmake.register_autocmd()
   cmake.register_autocmd_provided_by_users()
-  cmake.register_scratch_buffer(config.executor.name, config.runner.name)
+  if config.use_scratch then
+    cmake.register_scratch_buffer(config.executor.name, config.runner.name)
+  end
 end
 
 --- Generate build system for this project.

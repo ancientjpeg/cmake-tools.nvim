@@ -14,6 +14,9 @@ function scratch.create(executor, runner)
 end
 
 function scratch.append(cmd)
+  if not scratch.buffer then
+    return
+  end
   vim.schedule(function()
     vim.api.nvim_buf_set_lines(scratch.buffer, -1, -1, false, { cmd })
   end)

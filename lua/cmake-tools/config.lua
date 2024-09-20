@@ -27,6 +27,7 @@ local Config = {
   target_settings = {}, -- target specific config
   executor = nil,
   runner = nil,
+  use_scratch = nil,
   env_script = " ",
   cwd = vim.loop.cwd(),
 }
