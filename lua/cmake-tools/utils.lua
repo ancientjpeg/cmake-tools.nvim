@@ -84,16 +84,16 @@ function utils.deepcopy(orig, copies)
 end
 
 function utils.softlink(src, target)
-  if utils.file_exists(src) and not utils.file_exists(target) then
-    -- if we don't always use terminal
-    local cmd = "exec "
-      .. "'!cmake -E create_symlink "
-      .. utils.transform_path(src)
-      .. " "
-      .. utils.transform_path(target)
-      .. "'"
-    vim.cmd(cmd)
-  end
+  -- if utils.file_exists(src) and not utils.file_exists(target) then
+  --   -- if we don't always use terminal
+  --   local cmd = "exec "
+  --     .. "'!cmake -E create_symlink "
+  --     .. utils.transform_path(src)
+  --     .. " "
+  --     .. utils.transform_path(target)
+  --     .. "'"
+  --   vim.cmd(cmd)
+  -- end
 end
 
 function utils.transform_path(path, keep)
